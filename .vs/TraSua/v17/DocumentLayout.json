@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Huu Tuong\\Desktop\\TraSua\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{83D109B8-A516-4DE7-9EE1-4E83B3DDB308}|TraSua\\TraSua.csproj|c:\\users\\huu tuong\\desktop\\trasua\\trasua\\views\\user\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{83D109B8-A516-4DE7-9EE1-4E83B3DDB308}|TraSua\\TraSua.csproj|solutionrelative:trasua\\views\\user\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D109B8-A516-4DE7-9EE1-4E83B3DDB308}|TraSua\\TraSua.csproj|C:\\Users\\Huu Tuong\\Desktop\\TraSua\\trasua\\views\\user\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{83D109B8-A516-4DE7-9EE1-4E83B3DDB308}|TraSua\\TraSua.csproj|solutionrelative:trasua\\views\\user\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dangky.cshtml",
+              "DocumentMoniker": "C:\\Users\\Huu Tuong\\Desktop\\TraSua\\TraSua\\Views\\User\\Dangky.cshtml",
+              "RelativeDocumentMoniker": "TraSua\\Views\\User\\Dangky.cshtml",
+              "ToolTip": "C:\\Users\\Huu Tuong\\Desktop\\TraSua\\TraSua\\Views\\User\\Dangky.cshtml",
+              "RelativeToolTip": "TraSua\\Views\\User\\Dangky.cshtml",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAAA4AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-19T09:22:40.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dangnhap.cshtml",
+              "DocumentMoniker": "C:\\Users\\Huu Tuong\\Desktop\\TraSua\\TraSua\\Views\\User\\Dangnhap.cshtml",
+              "RelativeDocumentMoniker": "TraSua\\Views\\User\\Dangnhap.cshtml",
+              "ToolTip": "C:\\Users\\Huu Tuong\\Desktop\\TraSua\\TraSua\\Views\\User\\Dangnhap.cshtml",
+              "RelativeToolTip": "TraSua\\Views\\User\\Dangnhap.cshtml",
+              "ViewState": "AQIAABQAAAAAAAAAAAAAABUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-19T09:17:06.179Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

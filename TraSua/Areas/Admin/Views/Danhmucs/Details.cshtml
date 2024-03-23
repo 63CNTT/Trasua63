@@ -1,0 +1,26 @@
+﻿@model Trasua.Models.Danhmuc
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Chi tiết</h2>
+
+<div>
+    <h4>Danh Mục</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Tendanhmuc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tendanhmuc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.Madanhmuc })
+</p>

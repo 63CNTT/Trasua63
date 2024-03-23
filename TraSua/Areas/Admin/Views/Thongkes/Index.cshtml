@@ -1,0 +1,89 @@
+﻿@model IEnumerable<Trasua.Models.Thongke>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row mb-2">
+                            <div class="col-sm-4">
+                                <div class="search-box mr-2 mb-2 d-inline-block">
+                                    <div class="position-relative">
+                                        <input type="text" class="form-control" placeholder="Search...">
+                                        <i class="bx bx-search-alt search-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-centered table-nowrap">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>
+                                            Tên khách hàng
+                                        </th>
+                                        <th>
+                                            Số điện thoại
+                                        </th>
+                                        <th>
+                                            Tổng tiền đã mua
+                                        </th>
+                                        <th>
+                                            Số lượng đơn hàng
+                                        </th>
+                                    </tr>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Tennguoidung)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Dienthoai)
+                                            </td>
+                                            <td>@String.Format("{0:0,0}", item.Tongtien) VNĐ</td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Soluong)
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        @*<ul class="pagination pagination-rounded justify-content-end mb-2">
+                            <li class="page-item @(Model.PageNumber == 1 ? "disabled" : "")">
+                                <a class="page-link" href="@(Model.PageNumber == 1 ? "javascript:void(0);" : Url.Action("Index", new { page = Model.PageNumber - 1 }))" aria-label="Previous">
+                                    <i class="mdi mdi-chevron-left"></i>
+                                </a>
+                            </li>
+
+                            @for (int i = 1; i <= Model.PageCount; i++)
+                            {
+                                <li class="page-item @(Model.PageNumber == i ? "active" : "")">
+                                    <a class="page-link" href="@(Model.PageNumber == i ? "javascript:void(0);" : Url.Action("Index", new { page = i }))">@i</a>
+                                </li>
+                            }
+
+                            <li class="page-item @(Model.PageNumber == Model.PageCount ? "disabled" : "")">
+                                <a class="page-link" href="@(Model.PageNumber == Model.PageCount ? "javascript:void(0);" : Url.Action("Index", new { page = Model.PageNumber + 1 }))" aria-label="Next">
+                                    <i class="mdi mdi-chevron-right"></i>
+                                </a>
+                            </li>
+                        </ul>*@
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- end row -->
+    </div> <!-- container-fluid -->
+</div>

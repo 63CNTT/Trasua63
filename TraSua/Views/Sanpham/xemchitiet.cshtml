@@ -1,0 +1,28 @@
+﻿@using Trasua.Models
+@model Sanpham
+
+
+@{
+    ViewBag.Title = "xemchitiet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br />
+
+<CENTER>
+    <div style="margin:200px 20px 200px 200px "
+        <h2>CHI TIẾT SẢN PHẨM</h2>
+        <img src="@Url.Content("~" + Model.Anhbia)" width="200px" height="200px" />
+        <br />
+        <h3> @Model.Tensp</h3>
+        <h3 style="color:red">Giá: @String.Format("{0:0,0}", @Model.Giatien) VND</h3>
+        <br />
+        @Model.Mota
+        <br />
+        @using (Html.BeginForm("ThemGioHang", "GioHang", new { @iMasp = Model.Masp, @strURL = Request.Url.ToString() }))
+        {
+            <button type="submit" class="btn add-cart" onclick="redirectCart()">Thêm Vào Giỏ</button>
+
+        }
+
+    </div>
+</CENTER>

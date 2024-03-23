@@ -1,0 +1,35 @@
+﻿
+<section class="menu" id="menu">
+    <div class="box-container">
+        <div class="container">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-md-3">
+                        <div class="row justify-content-center">
+                            <!-- Thêm lớp mới và căn giữa -->
+                            <div class="box">
+                                <a href="@Url.Action("xemchitiet", new {@Masp=item.Masp })">
+                                    <img src=@Url.Content("~" +item.Anhbia.ToString()) class="img-responsive" alt="" width="100" height="100" />
+                                </a>
+                                <center>
+                                    <h3 style="color:black">@item.Tensp</h3>
+                                    <h3 style="color:red">@String.Format("{0:0,0}", @item.Giatien) VND</h3>
+                                    <br />
+                                    @using (Html.BeginForm("ThemGioHang", "GioHang", new { @iMasp = item.Masp, @strURL = Request.Url.ToString() }))
+                                    {
+                                        <button type="submit" class="btn add-cart" onclick="redirectCart()">Thêm Vào Giỏ</button>
+                                    }
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <br />
+            @*<center>
+                <button id="showHideBtn" class="btn btn-dark">SHOW MORE</button>
+            </center>*@
+        </div>
+    </div>
+</section>

@@ -1,0 +1,105 @@
+﻿@model IEnumerable<Trasua.Models.Nguoidung>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row mb-2">
+                            <div class="col-sm-4">
+                                <div class="search-box mr-2 mb-2 d-inline-block">
+                                    <div class="position-relative">
+                                        <input type="text" class="form-control" placeholder="Search...">
+                                        <i class="bx bx-search-alt search-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-8">
+                                <div class="text-sm-right">
+                                    <button type="button" class="btn btn-success btn-rounded waves-effect waves-light mb-2 mr-2" onclick="window.location.href='@Url.Action("Create")'">
+                                        <i class="mdi mdi-plus mr-1"></i> Thêm Người Dùng
+                                    </button>
+
+                                </div>
+                            </div><!-- end col-->
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-centered table-nowrap">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Hoten)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Email)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Dienthoai)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Matkhau)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Diachi)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.PhanQuyen.TenQuyen)
+                                        </th>
+                                        <th> Hành động</th>
+                                    </tr>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td style="width:260px"><a style="font-weight:700;color:black" href="#"><img src="@Html.DisplayFor(modelItem => item.Anhdaidien)" class="avatar" style=" width: 50px ;height: 50px; border-radius: 50%; margin-right: 10px" alt="Avatar">@Html.DisplayFor(modelItem => item.Hoten)</a></td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Email)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Dienthoai)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Matkhau)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Diachi)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.PhanQuyen.TenQuyen)
+                                            </td>
+                                            <td>
+                                                <a href="javascript:void(0);" class="mr-3 text-primary" data-toggle="tooltip" data-placement="top" title="Xem Chi Tiết" onclick="window.location.href='@Url.Action("Details", new { id = item.MaNguoiDung })';" data-toggle="modal" data-target=".exampleModal">
+                                                    <i class="bx bxs-show font-size-18"></i>
+                                                </a>
+
+                                                <a href="javascript:void(0);" class="mr-3 text-primary" data-toggle="tooltip" data-placement="top" title="Sửa" onclick="window.location.href='@Url.Action("Edit", new { id = item.MaNguoiDung })'">
+                                                    <i class="mdi mdi-pencil font-size-18"></i>
+                                                </a>
+
+                                                <a href="javascript:void(0);" class="text-danger" data-toggle="tooltip" data-placement="top" title="Xoá" onclick="if(confirm('Bạn có chắc muốn xóa?')) { window.location.href='@Url.Action("Delete", new { id = item.MaNguoiDung })'; }">
+                                                    <i class="mdi mdi-close font-size-18"></i>
+                                                </a>
+
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- end row -->
+    </div> <!-- container-fluid -->
+</div>

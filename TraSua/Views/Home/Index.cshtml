@@ -1,0 +1,178 @@
+﻿@{
+    ViewBag.Title = "ICT SHOP";
+
+}
+<section class="slider">
+    <div class="slideShow">
+        <div class="list-imgs">
+            <img src="/images/files/slider_1.jpg" alt="img1">
+            <img src="/images/files/slider_2.jpg" alt="img2">
+            <img src="/images/files/slider_3.jpg" alt="img3">
+        </div>
+        <div class="btns">
+            <div class="btn-left btns"><i class="fa-solid fa-chevron-left"></i></div>
+            <div class="btn-right btns"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+        <div class="index-images">
+            <div class="index-item index-item-0 active-1"></div>
+            <div class="index-item index-item-1"></div>
+            <div class="index-item index-item-2"></div>
+        </div>
+    </div>
+</section>
+<h1 class="heading">SẢN PHẨM <span>MỚI NHẤT</span></h1>
+<div>
+        @Html.Action("Sanphammoinhat", "Sanpham")
+    </div>
+@*<div class="dt">
+    @Html.Action("trasua", "Sanpham")
+</div>
+<div class="dt">
+    @Html.Action("kemtuoi", "Sanpham")
+</div>
+<div class="dt">
+    @Html.Action("traicay", "Sanpham")
+</div>*@
+<section class="about" id="about">
+    <h1 class="heading">GIỚI THIỆU</h1>
+    <div class="row g-0">
+        <div class="image">
+            <img src="/images/files/about-img.png" alt="" class="img-fluid">
+        </div>
+        <div class="content">
+            <h3>Chào Mừng Đến Với Montocha</h3>
+            <p>
+                Trà sữa Montocha là điểm đến lý tưởng cho những ai yêu thích hương vị trà sữa thơm ngon, béo ngậy. Nơi đây mang
+                đến cho bạn một menu đa dạng với các loại trà sữa được pha chế từ nguyên liệu cao cấp, đảm bảo an toàn vệ sinh thực phẩm.
+            </p>
+            <p>
+                Hãy đến với Trà Sữa Montocha để trải nghiệm những ly trà sữa thơm ngon, chất lượng và tận hưởng những giây phút thư giãn tuyệt vời!
+            </p>
+            <a href="#" class="btn btn-dark text-decoration-none">Tìm Hiểu Thêm</a>
+        </div>
+    </div>
+</section>
+<style>
+    .slider {
+        position: relative;
+        margin-top: 86px;
+        padding: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    .slideShow {
+        overflow: hidden;
+    }
+
+    .list-imgs {
+        display: flex;
+        transition: 1s;
+    }
+
+        .list-imgs img {
+            width: 100%;
+            height: auto;
+            /* flex-shrink: 0; */
+        }
+
+    .btns {
+        font-size: 35px;
+        color: #999;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: 0.5s;
+        cursor: pointer;
+    }
+
+        .btns:hover {
+            color: white;
+        }
+
+    .btn-left {
+        left: 60px;
+    }
+
+    .btn-right {
+        left: 1440px;
+    }
+
+    .index-images {
+        position: absolute;
+        z-index: 3;
+        bottom: 3px;
+        display: flex;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .index-item {
+        border: 1px solid #999;
+        border-radius: 50%;
+        padding: 5px;
+        margin: 3px;
+    }
+
+    .active-1 {
+        background-color: #999;
+    }
+</style>
+<script>
+    const listImage = document.querySelector('.list-imgs');
+    const imgs = document.querySelectorAll('.list-imgs img');
+    const btnLeft = document.querySelector('.btn-left');
+    const btnRight = document.querySelector('.btn-right');
+    const indexItems = document.querySelectorAll('.index-item');
+
+    let index = 0;
+    const lengthImg = imgs.length;
+
+    const handleChangeSlide = () => {
+        let width = imgs[0].offsetWidth;
+
+        if (index === lengthImg - 1) {
+            index = 0;
+        } else {
+            index++;
+        }
+
+        listImage.style.transform = `translateX(${width * -index}px)`;
+        updateActiveIndex();
+    };
+
+    const handlePreviousSlide = () => {
+        let width = imgs[0].offsetWidth;
+        if (index === 0) {
+            index = lengthImg - 1;
+        } else {
+            index--;
+        }
+
+        listImage.style.transform = `translateX(${width * -index}px)`;
+        updateActiveIndex();
+    };
+
+    const updateActiveIndex = () => {
+        for (let i = 0; i < indexItems.length; i++) {
+            indexItems[i].classList.remove('active-1');
+        }
+        indexItems[index].classList.add('active-1');
+    };
+
+    let timer = setInterval(handleChangeSlide, 5000);
+
+    btnRight.addEventListener('click', () => {
+        clearInterval(timer);
+        handleChangeSlide();
+        timer = setInterval(handleChangeSlide, 5000);
+    });
+
+    btnLeft.addEventListener('click', () => {
+        clearInterval(timer);
+        handlePreviousSlide();
+        timer = setInterval(handleChangeSlide, 5000);
+    });
+
+
+</script>

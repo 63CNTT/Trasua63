@@ -1,0 +1,156 @@
+﻿@model Trasua.Models.Sanpham
+<script src="~/Content/ckeditor/ckeditor.js"></script>
+<script src="~/Content/ckfinder/ckfinder.js"></script>
+<script src="~/Scripts/jquery-3.4.1.slim.js"></script>
+@{ ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml"; }
+
+<h2>Thêm sản phẩm mới</h2>
+<link href="~/Areas/assets/libs/dropzone/min/dropzone.min.css" rel="stylesheet" type="text/css" />
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="page-content">
+        <div class="container-fluid">
+            @if (!string.IsNullOrEmpty(ViewBag.Fail))
+            {
+                <div class="alert alert-danger">
+                    @ViewBag.Fail
+                </div>
+            }
+            <!-- start page title -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box d-flex align-items-center justify-content-between">
+                        <h4 class="mb-0 font-size-18">Thêm Sản Phẩm</h4>
+
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Trang Chủ</a></li>
+                                <li class="breadcrumb-item active">Thêm Sản Phẩm</li>
+                            </ol>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- end page title -->
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="manufacturername">Tên Sản Phẩm</label>
+                                            @Html.EditorFor(model => model.Tensp, new { htmlAttributes = new { @class = "form-control", @placeholder = "Nhập tên sản phẩm..." } })
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="manufacturername">Giá Tiền</label>
+                                            @Html.EditorFor(model => model.Giatien, new { htmlAttributes = new { @class = "form-control", @placeholder = "Nhập Giá..." } })
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="manufacturername">Số Lượng</label>
+                                            @Html.EditorFor(model => model.Soluong, new { htmlAttributes = new { @class = "form-control", @placeholder = "Nhập Số Lượng..." } })
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Loại Sản Phẩm</label>
+                                            @Html.DropDownListFor(model => model.Madanhmuc, ViewBag.typeListCreate as SelectList, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <label for="productdesc">Mô Tả Sản Phẩm</label>
+                                            @Html.TextAreaFor(model => model.Mota, new { @class = "form-control", @placeholder = "Nhập mô tả sản phẩm...", rows = "7" })
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Sản Phẩm mới:  </label>
+                                            @Html.EditorFor(model => model.Sanphammoi)
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="control-label">Ảnh Sản Phẩm</label>
+                                            @Html.EditorFor(model => model.Anhbia, new { htmlAttributes = new { @class = "form-control" } })
+                                            <button id="chonDuongDanAnh" type="button" class="btn btn-info" style="margin-top:10px"><i class="fas fa-image font-size-20"></i>Upload file</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <input type="submit" value="Thêm mới sản phẩm" class="btn btn-success" style="background-color: #556ee6" />
+                                <button type="submit" class="btn btn-secondary waves-effect">Cancel</button>
+                            </form>
+
+                        </div>
+                    </div>
+
+                    @*<div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title mb-3">Product Images</h4>
+
+                        <form action="https://themesbrand.com/" method="post" class="dropzone dz-clickable">
+
+
+                            <div class="dz-message needsclick">
+                                <div class="mb-3">
+                                    <i class="display-4 text-muted bx bxs-cloud-upload"></i>
+                                </div>
+
+                                <h4>Drop files here or click to upload.</h4>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>*@
+
+
+                </div>
+            </div>
+            <!-- end row -->
+
+        </div> <!-- container-fluid -->
+    </div>
+    <!-- End Page-content -->
+
+
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <script>document.write(new Date().getFullYear())</script> © Skote.
+                </div>
+                <div class="col-sm-6">
+                    <div class="text-sm-right d-none d-sm-block">
+                        Design & Develop by Themesbrand
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+}
+
+
+
+
+
+
+<script src="~/Areas/assets/libs/dropzone/min/dropzone.min.js"></script>
+<script language="javascrip" type="text/javascript">
+    $(function () {
+        $("#chonDuongDanAnh").click(function () {
+            var ckfiner = new CKFinder();
+            ckfiner.selectActionFunction = function (fileUrl) {
+                $("#Anhbia").val(fileUrl);
+            };
+            ckfiner.popup();
+        })
+    });
+    var ckeditor;
+    function createEditor(languageCode, id) {
+        var editor = CKEDITOR.replace(id, { language: languageCode });
+    }
+    $(function () { createEditor('vi', 'Mo') });
+</script>
