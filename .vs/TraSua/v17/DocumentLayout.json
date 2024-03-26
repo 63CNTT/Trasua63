@@ -1,13 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Huu Tuong\\Desktop\\TraSua\\",
+  "WorkspaceRootPath": "D:\\Github\\Trasua63\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83D109B8-A516-4DE7-9EE1-4E83B3DDB308}|TraSua\\TraSua.csproj|c:\\users\\huu tuong\\desktop\\trasua\\trasua\\views\\user\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{83D109B8-A516-4DE7-9EE1-4E83B3DDB308}|TraSua\\TraSua.csproj|d:\\github\\trasua63\\trasua\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{83D109B8-A516-4DE7-9EE1-4E83B3DDB308}|TraSua\\TraSua.csproj|solutionrelative:trasua\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D109B8-A516-4DE7-9EE1-4E83B3DDB308}|TraSua\\TraSua.csproj|d:\\github\\trasua63\\trasua\\content\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{83D109B8-A516-4DE7-9EE1-4E83B3DDB308}|TraSua\\TraSua.csproj|solutionrelative:trasua\\content\\css\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D109B8-A516-4DE7-9EE1-4E83B3DDB308}|TraSua\\TraSua.csproj|d:\\github\\trasua63\\trasua\\views\\user\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{83D109B8-A516-4DE7-9EE1-4E83B3DDB308}|TraSua\\TraSua.csproj|solutionrelative:trasua\\views\\user\\dangky.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{83D109B8-A516-4DE7-9EE1-4E83B3DDB308}|TraSua\\TraSua.csproj|C:\\Users\\Huu Tuong\\Desktop\\TraSua\\trasua\\views\\user\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{83D109B8-A516-4DE7-9EE1-4E83B3DDB308}|TraSua\\TraSua.csproj|d:\\github\\trasua63\\trasua\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{83D109B8-A516-4DE7-9EE1-4E83B3DDB308}|TraSua\\TraSua.csproj|solutionrelative:trasua\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{83D109B8-A516-4DE7-9EE1-4E83B3DDB308}|TraSua\\TraSua.csproj|D:\\Github\\Trasua63\\trasua\\views\\user\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{83D109B8-A516-4DE7-9EE1-4E83B3DDB308}|TraSua\\TraSua.csproj|solutionrelative:trasua\\views\\user\\dangnhap.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
@@ -18,15 +30,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "style.css",
+              "DocumentMoniker": "D:\\Github\\Trasua63\\TraSua\\Content\\css\\style.css",
+              "RelativeDocumentMoniker": "TraSua\\Content\\css\\style.css",
+              "ToolTip": "D:\\Github\\Trasua63\\TraSua\\Content\\css\\style.css",
+              "RelativeToolTip": "TraSua\\Content\\css\\style.css",
+              "ViewState": "AQIAAAcCAAAAAAAAAAAAABMCAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-26T08:49:58.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Github\\Trasua63\\TraSua\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TraSua\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Github\\Trasua63\\TraSua\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TraSua\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAEkAAAAAAAAAAAAAAGQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-26T08:48:49.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Github\\Trasua63\\TraSua\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "TraSua\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Github\\Trasua63\\TraSua\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "TraSua\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-26T08:30:05.323Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Dangky.cshtml",
-              "DocumentMoniker": "C:\\Users\\Huu Tuong\\Desktop\\TraSua\\TraSua\\Views\\User\\Dangky.cshtml",
+              "DocumentMoniker": "D:\\Github\\Trasua63\\TraSua\\Views\\User\\Dangky.cshtml",
               "RelativeDocumentMoniker": "TraSua\\Views\\User\\Dangky.cshtml",
-              "ToolTip": "C:\\Users\\Huu Tuong\\Desktop\\TraSua\\TraSua\\Views\\User\\Dangky.cshtml",
+              "ToolTip": "D:\\Github\\Trasua63\\TraSua\\Views\\User\\Dangky.cshtml",
               "RelativeToolTip": "TraSua\\Views\\User\\Dangky.cshtml",
               "ViewState": "AQIAAB0AAAAAAAAAAAAAAA4AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -35,15 +86,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Dangnhap.cshtml",
-              "DocumentMoniker": "C:\\Users\\Huu Tuong\\Desktop\\TraSua\\TraSua\\Views\\User\\Dangnhap.cshtml",
+              "DocumentMoniker": "D:\\Github\\Trasua63\\TraSua\\Views\\User\\Dangnhap.cshtml",
               "RelativeDocumentMoniker": "TraSua\\Views\\User\\Dangnhap.cshtml",
-              "ToolTip": "C:\\Users\\Huu Tuong\\Desktop\\TraSua\\TraSua\\Views\\User\\Dangnhap.cshtml",
+              "ToolTip": "D:\\Github\\Trasua63\\TraSua\\Views\\User\\Dangnhap.cshtml",
               "RelativeToolTip": "TraSua\\Views\\User\\Dangnhap.cshtml",
               "ViewState": "AQIAABQAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-19T09:17:06.179Z"
+              "WhenOpened": "2024-03-19T09:17:06.179Z",
+              "EditorCaption": ""
             }
           ]
         }
